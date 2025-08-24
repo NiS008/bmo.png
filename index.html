@@ -6,8 +6,8 @@
   <title>Green Rounded Rectangle with Dots</title>
   <style>
     :root {
-      --outer-green: #2ecc71;   /* outer layer */
-      --mint-green:  #b8f7d4;   /* inside rectangle */
+      --outer-green: #5bb39e;   /* outer layer */
+      --mint-green:  #b7f7d3;   /* inside rectangle */
       --dot: #000000;           /* black dots */
     }
 
@@ -21,46 +21,37 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     }
 
-    /* Rounded corner rectangle */
+        /* BMO-style screen */
     .card {
-      background: var(--mint-green);
-      width: min(80vw, 420px);
-      aspect-ratio: 4 / 3;       /* keeps it nicely proportioned */
-      border-radius: 24px;        /* rounded corners */
-      box-shadow: 0 10px 30px rgba(0,0,0,.15);
-      position: relative;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
+    background: var(--mint-green);   /* light mint inside */
+    width: 300px;                    /* fixed width (like a screen) */
+    height: 220px;                   /* height for screen shape */
+    border-radius: 20px;             /* smooth rounded corners */
+    border: 6px solid #2d9c7a;       /* darker green outline (like BMO's frame) */
+    position: relative;
+    display: grid;
+    place-items: center;
     }
+
 
     /* Two black dots inside */
     .eyes {
       display: flex;
-      gap: 18%;
-      width: 70%;
+      gap: 60%;
+      width: 30%;
       justify-content: center;
       align-items: center;
       transform: translateY(-8%); /* nudge up slightly */
     }
 
     .eye {
-      width: 14%;
+      width: 5%;
       aspect-ratio: 1 / 1;
       background: var(--dot);
       border-radius: 50%;
     }
 
-    /* Optional: subtle highlight */
-    .eye::after {
-      content: "";
-      display: block;
-      width: 35%;
-      aspect-ratio: 1 / 1;
-      background: rgba(255,255,255,.25);
-      border-radius: 50%;
-      transform: translate(40%, 35%);
-    }
+    
   </style>
 </head>
 <body>
